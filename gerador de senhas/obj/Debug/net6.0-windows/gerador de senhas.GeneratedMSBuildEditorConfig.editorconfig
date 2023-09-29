@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = gerador_de_senhas
-build_property.ProjectDir = D:\Área de Trabalho\C#\gerador de senhas\
+build_property.ProjectDir = D:\Área de Trabalho\repositorio\ProjetosDesktop-CSharp\gerador de senhas\

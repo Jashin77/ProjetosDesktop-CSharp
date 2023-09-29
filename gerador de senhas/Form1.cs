@@ -26,9 +26,25 @@ namespace gerador_de_senhas
         {
             if (tb_senha.Text == "")
             {
-                int length = 10;
-                string palavraAleatoria = GerarPalavraAleatoria(length);
-                tb_senha.Text = palavraAleatoria;
+                if (radioButton1.Checked == true)
+                {
+                    int length = 10;
+                    string palavraAleatoria = GerarPalavraAleatoria(length);
+                    tb_senha.Text = palavraAleatoria;
+                }
+                else if (radioButton2.Checked == true)
+                {
+                    int length = 8;
+                    string palavraAleatoria = GerarPalavraAleatoria(length);
+                    tb_senha.Text = palavraAleatoria;
+                }
+                else if (radioButton3.Checked == true)
+                {
+                    int length = 6;
+                    string palavraAleatoria = GerarPalavraAleatoria(length);
+                    tb_senha.Text = palavraAleatoria;
+                }
+
             }
             valorOriginal = tb_senha.Text;
         }
@@ -47,15 +63,29 @@ namespace gerador_de_senhas
         {
             if (cb_oculto.Checked)
             {
-                valorOriginal = tb_senha.Text; 
-                tb_senha.Text = new string('*', tb_senha.Text.Length); 
+                valorOriginal = tb_senha.Text;
+                tb_senha.Text = new string('*', tb_senha.Text.Length);
                 cb_oculto.Text = "oculto";
             }
             else
             {
-                tb_senha.Text = valorOriginal; 
+                tb_senha.Text = valorOriginal;
                 cb_oculto.Text = "ocultar";
             }
         }
+
+        private void btn_copiar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(tb_senha.Text))
+            {
+                Clipboard.SetText(tb_senha.Text);
+                MessageBox.Show("Texto copiado para a área de transferência.");
+            }
+            else
+            {
+                MessageBox.Show("O campo de texto está vazio. Nada para copiar.");
+            }
+        }
+
     }
 }

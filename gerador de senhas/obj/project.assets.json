@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Área de Trabalho\\C#\\gerador de senhas\\gerador de senhas.csproj",
+      "projectUniqueName": "D:\\Área de Trabalho\\repositorio\\ProjetosDesktop-CSharp\\gerador de senhas\\gerador de senhas.csproj",
       "projectName": "gerador de senhas",
-      "projectPath": "D:\\Área de Trabalho\\C#\\gerador de senhas\\gerador de senhas.csproj",
+      "projectPath": "D:\\Área de Trabalho\\repositorio\\ProjetosDesktop-CSharp\\gerador de senhas\\gerador de senhas.csproj",
       "packagesPath": "C:\\Users\\drago\\.nuget\\packages\\",
-      "outputPath": "D:\\Área de Trabalho\\C#\\gerador de senhas\\obj\\",
+      "outputPath": "D:\\Área de Trabalho\\repositorio\\ProjetosDesktop-CSharp\\gerador de senhas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
