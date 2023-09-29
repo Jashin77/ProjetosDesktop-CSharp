@@ -1,0 +1,17 @@
+D:\Área de Trabalho\C#\gerador de senhas\bin\Debug\net6.0-windows\gerador de senhas.exe
+D:\Área de Trabalho\C#\gerador de senhas\bin\Debug\net6.0-windows\gerador de senhas.deps.json
+D:\Área de Trabalho\C#\gerador de senhas\bin\Debug\net6.0-windows\gerador de senhas.runtimeconfig.json
+D:\Área de Trabalho\C#\gerador de senhas\bin\Debug\net6.0-windows\gerador de senhas.dll
+D:\Área de Trabalho\C#\gerador de senhas\bin\Debug\net6.0-windows\gerador de senhas.pdb
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.csproj.AssemblyReference.cache
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador_de_senhas.Form1.resources
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.csproj.GenerateResource.cache
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.AssemblyInfoInputs.cache
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.AssemblyInfo.cs
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.csproj.CoreCompileInputs.cache
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.dll
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\refint\gerador de senhas.dll
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.pdb
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\gerador de senhas.genruntimeconfig.cache
+D:\Área de Trabalho\C#\gerador de senhas\obj\Debug\net6.0-windows\ref\gerador de senhas.dll
