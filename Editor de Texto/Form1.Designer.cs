@@ -56,18 +56,23 @@
             btn_Novo = new ToolStripButton();
             btn_Abrir = new ToolStripButton();
             btn_salvar = new ToolStripButton();
-            btn_copiar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
+            btn_copiar = new ToolStripButton();
             btn_colar = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             btn_Negrito = new ToolStripButton();
             btn_itálico = new ToolStripButton();
             btn_sublinhado = new ToolStripButton();
             btn_fonte = new ToolStripButton();
-            btn_esquerda = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
+            btn_esquerda = new ToolStripButton();
             btn_meio = new ToolStripButton();
             btn_direita = new ToolStripButton();
+            fontDialog1 = new FontDialog();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
+            printDialog1 = new PrintDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -102,6 +107,7 @@
             newToolStripMenuItem.Name = "newToolStripMenuItem";
             newToolStripMenuItem.Size = new Size(149, 26);
             newToolStripMenuItem.Text = "Novo";
+            newToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
@@ -114,6 +120,7 @@
             salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
             salvarToolStripMenuItem.Size = new Size(149, 26);
             salvarToolStripMenuItem.Text = "Salvar";
+            salvarToolStripMenuItem.Click += salvarToolStripMenuItem_Click;
             // 
             // imprimirToolStripMenuItem
             // 
@@ -237,6 +244,7 @@
             btn_Novo.Name = "btn_Novo";
             btn_Novo.Size = new Size(29, 24);
             btn_Novo.Text = "Novo";
+            btn_Novo.Click += btn_Novo_Click;
             // 
             // btn_Abrir
             // 
@@ -255,6 +263,12 @@
             btn_salvar.Name = "btn_salvar";
             btn_salvar.Size = new Size(29, 24);
             btn_salvar.Text = "Salvar";
+            btn_salvar.Click += btn_salvar_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // btn_copiar
             // 
@@ -264,11 +278,6 @@
             btn_copiar.Name = "btn_copiar";
             btn_copiar.Size = new Size(29, 24);
             btn_copiar.Text = "Copiar";
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // btn_colar
             // 
@@ -320,6 +329,11 @@
             btn_fonte.Size = new Size(29, 24);
             btn_fonte.Text = "Fonte";
             // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
+            // 
             // btn_esquerda
             // 
             btn_esquerda.DisplayStyle = ToolStripItemDisplayStyle.Image;
@@ -328,11 +342,6 @@
             btn_esquerda.Name = "btn_esquerda";
             btn_esquerda.Size = new Size(29, 24);
             btn_esquerda.Text = "esquerda";
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // btn_meio
             // 
@@ -352,6 +361,18 @@
             btn_direita.Size = new Size(29, 24);
             btn_direita.Text = "direita";
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.DefaultExt = "txt";
+            // 
+            // printDialog1
+            // 
+            printDialog1.UseEXDialog = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -365,6 +386,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editor de Texto";
+            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
@@ -414,5 +436,10 @@
         private ToolStripButton btn_esquerda;
         private ToolStripButton btn_meio;
         private ToolStripButton btn_direita;
+        private FontDialog fontDialog1;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
+        private PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
