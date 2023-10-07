@@ -12,6 +12,7 @@ namespace WinFormsApp1
         {
 
         }
+
         private void Novo()
         {
             richTextBox1.Clear();
@@ -41,7 +42,7 @@ namespace WinFormsApp1
         {
             this.openFileDialog1.Title = "Abrir Arquivo";
             openFileDialog1.InitialDirectory = @"D:\\Área de Trabalho\\repositorio\\ProjetosDesktop-CSharp\\Editor de Texto";
-            
+
             if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -63,6 +64,94 @@ namespace WinFormsApp1
                     MessageBox.Show("ERRO NA LEITURA DO ARQUIVO: " + ex.Message, "Erro ao ler o arquivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        private void Copiar()
+        {
+            if (richTextBox1.SelectionLength > 0)
+            {
+                richTextBox1.Copy();
+            }
+        }
+        private void Colar()
+        {
+            richTextBox1.Paste();
+        }
+        private void Regular()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool reg = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            reg = richTextBox1.Font.Bold;
+
+            if (reg == false)
+            {
+                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+            }
+            else if (reg == true)
+            {
+                richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
+            }
+        }
+        private void Negrito()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool necr = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            necr = richTextBox1.Font.Bold;
+
+            if (richTextBox1.SelectionFont != null)
+            {
+                bool estaEmNegrito = richTextBox1.SelectionFont.Bold;
+
+                FontStyle novoEstilo = estaEmNegrito ? richTextBox1.SelectionFont.Style & ~FontStyle.Bold : richTextBox1.SelectionFont.Style | FontStyle.Bold;
+
+                richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, novoEstilo);
+            }
+        }
+        private void Italico()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool ita = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            ita = richTextBox1.Font.Italic;
+
+            if (richTextBox1.SelectionFont != null)
+            {
+                bool estaEmItalico = richTextBox1.SelectionFont.Italic;
+
+                FontStyle novoEstilo = estaEmItalico ? richTextBox1.SelectionFont.Style & ~FontStyle.Italic : richTextBox1.SelectionFont.Style | FontStyle.Italic;
+
+                richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, novoEstilo);
+            }
+        }
+        public void Sublinhado()
+        {
+            string nome_da_fonte = null;
+            float tamanho_da_fonte = 0;
+            bool sub = false;
+
+            nome_da_fonte = richTextBox1.Font.Name;
+            tamanho_da_fonte = richTextBox1.Font.Size;
+            sub = richTextBox1.Font.Underline;
+
+            if (richTextBox1.SelectionFont != null)
+            {
+                bool estaSublinhado = richTextBox1.SelectionFont.Underline;
+
+                FontStyle novoEstilo = estaSublinhado ? richTextBox1.SelectionFont.Style & ~FontStyle.Underline : richTextBox1.SelectionFont.Style | FontStyle.Underline;
+
+                richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, novoEstilo);
+            }
+
         }
 
         private void btn_Novo_Click(object sender, EventArgs e)
@@ -98,6 +187,56 @@ namespace WinFormsApp1
         private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+        }
+
+        private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Copiar();
+        }
+
+        private void btn_copiar_Click(object sender, EventArgs e)
+        {
+            Copiar();
+        }
+
+        private void colarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Colar();
+        }
+
+        private void btn_colar_Click(object sender, EventArgs e)
+        {
+            Colar();
+        }
+
+        private void negritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void btn_Negrito_Click(object sender, EventArgs e)
+        {
+            Negrito();
+        }
+
+        private void btn_itálico_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void itálicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Italico();
+        }
+
+        private void btn_sublinhado_Click(object sender, EventArgs e)
+        {
+            Sublinhado();
+        }
+
+        private void sublinhadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sublinhado();
         }
     }
 }
