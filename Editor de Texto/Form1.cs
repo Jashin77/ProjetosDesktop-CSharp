@@ -37,6 +37,33 @@ namespace WinFormsApp1
                 MessageBox.Show("ERRO NA CRIAÇÂO DO ARQUIVO: " + ex.Message, "Erro ao gravar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void Abrir()
+        {
+            this.openFileDialog1.Title = "Abrir Arquivo";
+            openFileDialog1.InitialDirectory = @"D:\\Área de Trabalho\\repositorio\\ProjetosDesktop-CSharp\\Editor de Texto";
+            
+            if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    FileStream arquivo = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                    StreamReader streamReader = new StreamReader(arquivo);
+                    streamReader.BaseStream.Seek(0, SeekOrigin.Begin);
+                    this.richTextBox1.Clear();
+                    string linha = streamReader.ReadLine();
+                    while (linha != null)
+                    {
+                        richTextBox1.Text += linha + "\n";
+                        linha = streamReader.ReadLine();
+                    }
+                    streamReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERRO NA LEITURA DO ARQUIVO: " + ex.Message, "Erro ao ler o arquivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
         private void btn_Novo_Click(object sender, EventArgs e)
         {
@@ -56,6 +83,21 @@ namespace WinFormsApp1
         private void salvarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Salvar();
+        }
+
+        private void btn_Abrir_Click(object sender, EventArgs e)
+        {
+            Abrir();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Abrir();
+        }
+
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

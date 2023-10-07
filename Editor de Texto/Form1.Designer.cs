@@ -114,6 +114,7 @@
             openToolStripMenuItem.Name = "openToolStripMenuItem";
             openToolStripMenuItem.Size = new Size(149, 26);
             openToolStripMenuItem.Text = "Abrir";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // salvarToolStripMenuItem
             // 
@@ -254,6 +255,7 @@
             btn_Abrir.Name = "btn_Abrir";
             btn_Abrir.Size = new Size(29, 24);
             btn_Abrir.Text = "Abrir";
+            btn_Abrir.Click += btn_Abrir_Click;
             // 
             // btn_salvar
             // 
@@ -368,6 +370,7 @@
             // saveFileDialog1
             // 
             saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.FileOk += saveFileDialog1_FileOk;
             // 
             // printDialog1
             // 
