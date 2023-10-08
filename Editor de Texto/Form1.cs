@@ -99,19 +99,49 @@ namespace WinFormsApp1
         {
             string nome_da_fonte = null;
             float tamanho_da_fonte = 0;
-            bool necr = false;
+            bool n,i,s = false;
 
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
-            necr = richTextBox1.Font.Bold;
+            n = richTextBox1.SelectionFont.Bold;
+            i = richTextBox1.SelectionFont.Italic;
+            s = richTextBox1.SelectionFont.Underline;
+            richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Regular);
 
-            if (richTextBox1.SelectionFont != null)
+            if (n == false)
             {
-                bool estaEmNegrito = richTextBox1.SelectionFont.Bold;
-
-                FontStyle novoEstilo = estaEmNegrito ? richTextBox1.SelectionFont.Style & ~FontStyle.Bold : richTextBox1.SelectionFont.Style | FontStyle.Bold;
-
-                richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, novoEstilo);
+               if(i == true & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+                }
+               else if(i == false & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Underline);
+                }
+               else if(i == true & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic);
+                }
+               else if(i == false & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
+                }
+               
+            }
+            else
+            {
+                if (i == true & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic | FontStyle.Underline);
+                }
+                else if (i == false & s == true)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Underline);
+                }
+                else if (i == true & s == false)
+                {
+                    richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Italic);
+                }
             }
         }
         private void Italico()
