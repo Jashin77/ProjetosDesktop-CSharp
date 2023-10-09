@@ -2,7 +2,7 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        StreamReader leitura = null;
+        StringReader leitura = null;
         public Form1()
         {
             InitializeComponent();
@@ -195,7 +195,16 @@ namespace WinFormsApp1
         {
             richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
         }
-
+        private void Imprimir()
+        {
+            printDialog1.Document = printDocument1;
+            string texto = this.richTextBox1.Text;
+            leitura = new StringReader(texto);
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocument1.Print();
+            }
+        }
         private void btn_Novo_Click(object sender, EventArgs e)
         {
             Novo();
@@ -308,7 +317,50 @@ namespace WinFormsApp1
 
         private void direitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AlinharDireita();  
+            AlinharDireita();
+        }
+
+        private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Imprimir();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            float linhasPage = 0;
+            float PosY = 0;
+            int cont = 0;
+            float margemEsquerda = e.MarginBounds.Left - 50;
+            float margemSuperior = e.MarginBounds.Top - 50;
+            if (margemEsquerda < 5)
+            {
+                margemEsquerda = 20;
+            }
+            if (margemSuperior < 5)
+            {
+                margemSuperior = 20;
+            }
+            string linha = null;
+            Font fonte = this.richTextBox1.Font;
+            SolidBrush pincel = new SolidBrush(Color.Black);
+            linhasPage = e.MarginBounds.Height / fonte.GetHeight(e.Graphics);
+            linha = leitura.ReadLine();
+            while (cont < linhasPage)
+            {
+                PosY = (margemSuperior + (cont * fonte.GetHeight(e.Graphics)));
+                e.Graphics.DrawString(linha, fonte, pincel, margemEsquerda, PosY, new StringFormat());
+                cont += 1;
+                linha = leitura.ReadLine();
+            }
+            if (linha != null)
+            {
+                e.HasMorePages = true;
+            }
+            else
+            {
+                e.HasMorePages = false;
+            }
+            pincel.Dispose();
         }
     }
 }
