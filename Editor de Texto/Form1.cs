@@ -99,7 +99,7 @@ namespace WinFormsApp1
         {
             string nome_da_fonte = null;
             float tamanho_da_fonte = 0;
-            bool n,i,s = false;
+            bool n, i, s = false;
 
             nome_da_fonte = richTextBox1.Font.Name;
             tamanho_da_fonte = richTextBox1.Font.Size;
@@ -110,23 +110,23 @@ namespace WinFormsApp1
 
             if (n == false)
             {
-               if(i == true & s == true)
+                if (i == true & s == true)
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
                 }
-               else if(i == false & s == true)
+                else if (i == false & s == true)
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Underline);
                 }
-               else if(i == true & s == false)
+                else if (i == true & s == false)
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold | FontStyle.Italic);
                 }
-               else if(i == false & s == false)
+                else if (i == false & s == false)
                 {
                     richTextBox1.SelectionFont = new Font(nome_da_fonte, tamanho_da_fonte, FontStyle.Bold);
                 }
-               
+
             }
             else
             {
@@ -182,6 +182,18 @@ namespace WinFormsApp1
                 richTextBox1.SelectionFont = new Font(richTextBox1.SelectionFont, novoEstilo);
             }
 
+        }
+        private void AlinharEsquerda()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+        }
+        private void AlinharDireita()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+        }
+        private void Centralizar()
+        {
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private void btn_Novo_Click(object sender, EventArgs e)
@@ -267,6 +279,36 @@ namespace WinFormsApp1
         private void sublinhadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sublinhado();
+        }
+
+        private void btn_esquerda_Click(object sender, EventArgs e)
+        {
+            AlinharEsquerda();
+        }
+
+        private void esquerdaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlinharEsquerda();
+        }
+
+        private void btn_meio_Click(object sender, EventArgs e)
+        {
+            Centralizar();
+        }
+
+        private void centralizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Centralizar();
+        }
+
+        private void btn_direita_Click(object sender, EventArgs e)
+        {
+            AlinharDireita();
+        }
+
+        private void direitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlinharDireita();  
         }
     }
 }
