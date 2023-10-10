@@ -1,0 +1,17 @@
+D:\Área de Trabalho\projetos\cronometro\bin\Debug\net6.0-windows\cronometro.exe
+D:\Área de Trabalho\projetos\cronometro\bin\Debug\net6.0-windows\cronometro.deps.json
+D:\Área de Trabalho\projetos\cronometro\bin\Debug\net6.0-windows\cronometro.runtimeconfig.json
+D:\Área de Trabalho\projetos\cronometro\bin\Debug\net6.0-windows\cronometro.dll
+D:\Área de Trabalho\projetos\cronometro\bin\Debug\net6.0-windows\cronometro.pdb
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.Form1.resources
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.Properties.Resources.resources
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.csproj.GenerateResource.cache
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.GeneratedMSBuildEditorConfig.editorconfig
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.AssemblyInfoInputs.cache
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.AssemblyInfo.cs
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.csproj.CoreCompileInputs.cache
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.dll
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\refint\cronometro.dll
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.pdb
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\cronometro.genruntimeconfig.cache
+D:\Área de Trabalho\projetos\cronometro\obj\Debug\net6.0-windows\ref\cronometro.dll
