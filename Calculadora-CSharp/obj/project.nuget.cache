@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RnPvELGtM1DYgl175vHqPYl0u+17HT7yDx9CJkyP+QkwHnnAL3Fxo/0BkGyiUCup3Ovos01AWqwev/7O6whqOw==",
+  "dgSpecHash": "6hqtqWW0/15GbZfoRUQcQkztf3f07v/pjkUGhg5vIJ9uT6+WXDCBsAuybqy3IKeBx4Xvnbfge/l3EZajltE2Zw==",
   "success": true,
-  "projectFilePath": "D:\\Área de Trabalho\\projetos\\Calculadora-CSharp\\Calculadora-CSharp.csproj",
+  "projectFilePath": "D:\\Área de Trabalho\\repositorio\\ProjetosDesktop-CSharp\\Calculadora-CSharp\\Calculadora-CSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\drago\\.nuget\\packages\\ncalc\\1.3.8\\ncalc.1.3.8.nupkg.sha512"
   ],
